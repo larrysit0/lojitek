@@ -1,93 +1,91 @@
-
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f8f8f8;
+/* Estilo para los botones en las tarjetas */
+.btn-tutoriales {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: white;
     color: #333;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
-    
-header {
-    text-align: center;
+
+.btn-tutoriales:hover {
+    background-color: #f0f0f0;
+}
+
+/* Sección Interactiva (Ruleta, Donaciones) */
+.interactive-area {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background-color: #f4f4f4; /* Un color de fondo suave */
+}
+
+.feature-box {
+    width: 300px;
     padding: 2rem;
-    background: #F57809; /* Igual que el footer */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    background: white;
+}
+
+/* Estilo para botones de acción */
+.action-btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Para el link de PayPal */
+    text-align: center;
+}
+
+.paypal-btn {
+    background-color: #0070BA; /* Azul de PayPal */
     color: white;
 }
 
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2rem;
-    gap: 1.5rem;
+.paypal-btn:hover {
+    background-color: #005A9C;
 }
 
-.card {
-    width: 250px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    text-align: center;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.crypto-btn {
+    background-color: #FF9800; /* Naranja para Crypto */
+    color: white;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+.crypto-btn:hover {
+    background-color: #E68900;
 }
 
-.card img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1rem;
+#spin-button {
+    background-color: #E91E63; /* Rosa llamativo para la Ruleta */
+    color: white;
 }
 
-.footer {
-  background-color: #ff6f00; /* igual que el header */
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+#spin-button:hover {
+    background-color: #C2185B;
 }
 
-
-.coffee-support {
-    text-align: center;
-    margin: 2rem 0;
+.social-links {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
 }
 
-#coffee-cup {
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
-}
-
-#coffee-cup img {
-    width: 60px;
-    transition: transform 0.3s ease;
-}
-
-#coffee-cup:hover img {
-    transform: scale(1.1);
-}
-
-#coffee-popup {
+.hidden-info {
     margin-top: 1rem;
-    background-color: #ffe0b2;
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    border: 1px solid #ff9800;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-#coffee-popup.hidden {
-    display: none;
-}
-
-#coffee-popup .number {
-    font-size: 1.4rem;
-    color: #e65100;
-    font-weight: bold;
+    padding: 0.5rem;
+    background-color: #fffde7; /* Fondo suave para direcciones */
+    border: 1px dashed #ffeb3b;
+    border-radius: 4px;
+    display: none; /* Asegúrate de que inicialmente esté oculto */
 }
