@@ -1,28 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- LÓGICA DE DONACIONES (EXISTENTE) ---
-    
-    // 1. Invítame un Café (Yape)
-    document.getElementById("coffee-cup").addEventListener("click", function() {
-        const popup = document.getElementById("coffee-popup");
-        popup.classList.toggle("hidden");
-    });
-
-    // 2. Donar con Crypto
-    const cryptoButton = document.getElementById("crypto-button");
-    const cryptoAddresses = document.getElementById("crypto-addresses");
-    if (cryptoButton) {
-        cryptoButton.addEventListener("click", function() {
-            if (cryptoAddresses.style.display === "block") {
-                cryptoAddresses.style.display = "none";
-                this.textContent = "Donar con Crypto ₿";
-            } else {
-                cryptoAddresses.style.display = "block";
-                this.textContent = "OCULTAR Direcciones";
-            }
+    // --- LÓGICA DE TU FUNCIÓN ORIGINAL (CUPÓN DE CAFÉ) ---
+    const coffeeCup = document.getElementById("coffee-cup");
+    if (coffeeCup) {
+        coffeeCup.addEventListener("click", function() {
+            const popup = document.getElementById("coffee-popup");
+            popup.classList.toggle("hidden");
         });
     }
 
-    // --- LÓGICA DEL CARRUSEL Y MODAL (NUEVA) ---
+    // --- LÓGICA DEL CARRUSEL Y MODAL ---
 
     const track = document.querySelector('.carousel-track');
     const slides = Array.from(document.querySelectorAll('.project-slide'));
@@ -38,28 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const slidesToShow = 3;
         let slideIndex = 0;
         
-        // Se calcula el ancho del slide una vez que la página está cargada
-        const slideWidth = slides[0].offsetWidth;
+        // El offsetWidth se calcula al cargar, asegurando la precisión del movimiento
+        const slideWidth = slides[0].offsetWidth; 
 
         const moveSlides = () => {
             track.style.transform = 'translateX(-' + (slideIndex * slideWidth) + 'px)';
         };
 
         nextButton.addEventListener('click', () => {
-            if (slideIndex < slides.length - slidesToShow) {
-                slideIndex++;
-            } else {
-                slideIndex = 0; // Bucle
-            }
+            slideIndex = (slideIndex < slides.length - slidesToShow) ? slideIndex + 1 : 0;
             moveSlides();
         });
 
         prevButton.addEventListener('click', () => {
-            if (slideIndex > 0) {
-                slideIndex--;
-            } else {
-                slideIndex = slides.length - slidesToShow; // Bucle
-            }
+            slideIndex = (slideIndex > 0) ? slideIndex - 1 : slides.length - slidesToShow;
             moveSlides();
         });
 
@@ -69,22 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalTitle.textContent = slide.getAttribute('data-title');
                 modalInfo.textContent = slide.getAttribute('data-info');
                 
-                // Aquí puedes configurar el link específico si lo tienes
-                modalLink.href = "TU_LINK_DEL_TUTORIAL_DE_" + slide.getAttribute('data-title').replace(/\s/g, '_'); 
+                // Simulación de enlace para el tutorial
+                modalLink.href = "#tutorial-" + slide.getAttribute('data-title').toLowerCase().replace(/\s/g, '-');
 
                 modal.style.display = "block";
             });
         });
     }
 
-    // Cerrar Modal con la 'X'
+    // Cerrar Modal con la 'X' y al hacer click fuera
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
             modal.style.display = "none";
         });
     }
-
-    // Cerrar Modal al hacer click fuera
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
             modal.style.display = "none";
