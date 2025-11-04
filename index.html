@@ -3,41 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>LOJITEK.VIP</title>
 </head>
 <body>
     
-    <header class="top-header">
-        <h1>LOJITEK.VIP</h1>
-        <p>Donde la tecnología, la comunidad y la naturaleza se encuentran</p>
+    <header>
+        <header class="top-header">
+            <h1>LOJITEK.VIP</h1>
+            <p>Donde la tecnología, la comunidad y la naturaleza se encuentran</p>
+        </header>
     </header>
 
     <main>
-        <section class="cards-container">
-            <div class="card" style="background-color:#FFA726;">
-                <img src="https://cdn-icons-png.flaticon.com/512/4086/4086679.png" alt="Turismo">
-                <h2>Turismo</h2>
-                <p>Descubre los paisajes y aventuras de Topará.</p>
-            </div>
-            <div class="card" style="background-color:#66BB6A;">
-                <img src="https://i.postimg.cc/X7fJk4y4/robot.png" alt="Robotica">
-                <h2>Robótica</h2>
-                <p>Innovación en automatización y futuro tecnológico.</p>
-            </div>
-            <div class="card" style="background-color:#42A5F5;">
-                <img src="https://cdn-icons-png.flaticon.com/512/2814/2814877.png" alt="Eventos">
-                <h2>Eventos</h2>
-                <p>Conectamos comunidades con actividades culturales.</p>
-            </div>
-            <div class="card" style="background-color:#AB47BC;">
-                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Empleos">
-                <h2>Servicios</h2>
-                <p>Sercos perimetricos, paneles solares systema de alarmas.</p>
-            </div>
-        </section>
-
+        
         <section class="carrusel-section">
             <h3>Nuestros Proyectos en Imágenes ✨</h3>
             <div class="carousel-container">
@@ -65,25 +44,26 @@
                 <button class="carousel-btn next-btn">❯</button>
             </div>
         </section>
-
-        <section class="interactive-area single-column">
-            <div class="support-links feature-box">
-                <h3>Apoya Nuestros Tutoriales 🚀</h3>
-                <p>Tu donación nos ayuda a seguir creando contenido de alta calidad.</p>
-                
-                <a href="TU_LINK_PAYPAL" target="_blank" class="action-btn paypal-btn">Donar con PayPal 💳</a>
-                
-                <button id="crypto-button" class="action-btn crypto-btn">Donar con Crypto ₿</button>
-                <div id="crypto-addresses" class="hidden-info">
-                    <p>BTC: [Tu dirección BTC]</p>
-                    <p>ETH: [Tu dirección ETH]</p>
-                </div>
-                
-                <div class="social-links">
-                    <p>Síguenos: <a href="TU_LINK_YOUTUBE" target="_blank">YouTube ▶️</a> | 
-                    <a href="TU_LINK_TIKTOK" target="_blank">TikTok 🎵</a> | 
-                    <a href="TU_LINK_WHATSAPP" target="_blank">WhatsApp 💬</a></p>
-                </div>
+        <section class="cards-container">
+            <div class="card" style="background-color:#FFA726;">
+                <img src="https://cdn-icons-png.flaticon.com/512/4086/4086679.png" alt="Turismo">
+                <h2>Turismo</h2>
+                <p>Descubre los paisajes y aventuras de Topará.</p>
+            </div>
+            <div class="card" style="background-color:#66BB6A;">
+                <img src="https://i.postimg.cc/X7fJk4y4/robot.png" alt="Robotica">
+                <h2>Robótica</h2>
+                <p>Innovación en automatización y futuro tecnológico.</p>
+            </div>
+            <div class="card" style="background-color:#42A5F5;">
+                <img src="https://cdn-icons-png.flaticon.com/512/2814/2814877.png" alt="Eventos">
+                <h2>Eventos</h2>
+                <p>Conectamos comunidades con actividades culturales.</p>
+            </div>
+            <div class="card" style="background-color:#AB47BC;">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Empleos">
+                <h2>Servicios</h2>
+                <p>Sercos perimetricos, paneles solares systema de alarmas.</p>
             </div>
         </section>
     </main>
@@ -93,15 +73,27 @@
             <span class="close-btn">&times;</span>
             <h4 id="modal-title">Título del Proyecto</h4>
             <p id="modal-info">Información detallada del proyecto se mostrará aquí.</p>
-            <a href="TU_LINK_DEL_TUTORIAL" id="modal-link" target="_blank" class="action-btn">Ver Tutorial Relacionado</a>
+            <a href="TU_LINK_DEL_TUTORIAL" id="modal-link" target="_blank" class="modal-link-btn">Ver Más</a>
         </div>
     </div>
-
+    
     <section class="coffee-support">
-        </section>
+        <div id="coffee-cup">
+            <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Invítame un café">
+            <p>Invítame un café</p>
+        </div>
+        <div id="coffee-popup" class="hidden">
+            <p><strong>Yapéame</strong> al número:</p>
+            <p class="number">960 661 434</p>
+            <p class="note">☕ para un café o ❤️ deja un donativo</p>
+        </div>
+    </section>
 
     <footer>
+        <footer class="footer">
+            <p>&copy; 2025 Lojitek.vip - Unidos por un futuro brillante <br> contactanos: Peru/Lima 960661434 / 980516446</p>         
         </footer>
+    </footer>
 
     <script src="script.js"></script>
 </body>
