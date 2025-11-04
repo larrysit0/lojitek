@@ -1,19 +1,38 @@
-<main>
-    <section class="cards-container full-width-sections">
-        
-        <div class="card" style="background-color:#42A5F5;"> 
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968313.png" alt="Python Icono">
-            <h2>Python 🐍</h2>
-            <p>De novato a experto. Aprende Machine Learning y Web.</p>
-            <a href="TU_LINK_YOUTUBE_PYTHON" target="_blank" class="btn-tutoriales">Ver Tutoriales Ya</a>
-        </div>
-        
-        <div class="card" style="background-color:#FFCA28;"> 
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript Icono">
-            <h2>JavaScript 📜</h2>
-            <p>Dominio web interactivo y desarrollo de APIs.</p>
-            <a href="TU_LINK_YOUTUBE_JS" target="_blank" class="btn-tutoriales">Ver Tutoriales Ya</a>
+<section class="carrusel-section">
+        <h3>Explora Nuestros Proyectos Destacados ✨</h3>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                
+                <div class="project-slide" data-info="Información detallada del proyecto 1: Python y un microcontrolador." data-title="Proyecto de Domótica Python">
+                    <img src="foto1.png" alt="Proyecto 1">
+                </div>
+                <div class="project-slide" data-info="Detalles del tutorial 2: Creando una API REST con JavaScript (Node.js)." data-title="Tutorial JavaScript: API REST">
+                    <img src="foto2.png" alt="Proyecto 2">
+                </div>
+                <div class="project-slide" data-info="Detalles del proyecto 3: Web moderna con React y JS avanzado." data-title="Proyecto Web Moderno">
+                    <img src="foto3.png" alt="Proyecto 3">
+                </div>
+                <div class="project-slide" data-info="Información del proyecto 4: Automatización de tareas con scripts de Python." data-title="Automatización Python">
+                    <img src="foto4.png" alt="Proyecto 4">
+                </div>
+                <div class="project-slide" data-info="Información del proyecto 5: Juego simple en el navegador con JavaScript." data-title="Juego JS Básico">
+                    <img src="foto5.png" alt="Proyecto 5">
+                </div>
+                <div class="project-slide" data-info="Información del proyecto 6: Análisis de datos con librerías de Python." data-title="Análisis de Datos Python">
+                    <img src="foto6.png" alt="Proyecto 6">
+                </div>
+
+            </div>
+            <button class="carousel-btn prev-btn">❮</button>
+            <button class="carousel-btn next-btn">❯</button>
         </div>
     </section>
-    
-    </main>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h4 id="modal-title">Título del Proyecto</h4>
+            <p id="modal-info">Información detallada del proyecto se mostrará aquí.</p>
+            <a href="#" id="modal-link" target="_blank" class="btn-tutoriales">Ver Tutorial</a>
+        </div>
+    </div>
