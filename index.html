@@ -1,38 +1,108 @@
-<section class="carrusel-section">
-        <h3>Explora Nuestros Proyectos Destacados ✨</h3>
-        <div class="carousel-container">
-            <div class="carousel-track">
-                
-                <div class="project-slide" data-info="Información detallada del proyecto 1: Python y un microcontrolador." data-title="Proyecto de Domótica Python">
-                    <img src="foto1.png" alt="Proyecto 1">
-                </div>
-                <div class="project-slide" data-info="Detalles del tutorial 2: Creando una API REST con JavaScript (Node.js)." data-title="Tutorial JavaScript: API REST">
-                    <img src="foto2.png" alt="Proyecto 2">
-                </div>
-                <div class="project-slide" data-info="Detalles del proyecto 3: Web moderna con React y JS avanzado." data-title="Proyecto Web Moderno">
-                    <img src="foto3.png" alt="Proyecto 3">
-                </div>
-                <div class="project-slide" data-info="Información del proyecto 4: Automatización de tareas con scripts de Python." data-title="Automatización Python">
-                    <img src="foto4.png" alt="Proyecto 4">
-                </div>
-                <div class="project-slide" data-info="Información del proyecto 5: Juego simple en el navegador con JavaScript." data-title="Juego JS Básico">
-                    <img src="foto5.png" alt="Proyecto 5">
-                </div>
-                <div class="project-slide" data-info="Información del proyecto 6: Análisis de datos con librerías de Python." data-title="Análisis de Datos Python">
-                    <img src="foto6.png" alt="Proyecto 6">
-                </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>LOJITEK.VIP</title>
+</head>
+<body>
+    
+    <header class="top-header">
+        <h1>LOJITEK.VIP</h1>
+        <p>Donde la tecnología, la comunidad y la naturaleza se encuentran</p>
+    </header>
 
+    <main>
+        <section class="cards-container">
+            <div class="card" style="background-color:#FFA726;">
+                <img src="https://cdn-icons-png.flaticon.com/512/4086/4086679.png" alt="Turismo">
+                <h2>Turismo</h2>
+                <p>Descubre los paisajes y aventuras de Topará.</p>
             </div>
-            <button class="carousel-btn prev-btn">❮</button>
-            <button class="carousel-btn next-btn">❯</button>
-        </div>
-    </section>
+            <div class="card" style="background-color:#66BB6A;">
+                <img src="https://i.postimg.cc/X7fJk4y4/robot.png" alt="Robotica">
+                <h2>Robótica</h2>
+                <p>Innovación en automatización y futuro tecnológico.</p>
+            </div>
+            <div class="card" style="background-color:#42A5F5;">
+                <img src="https://cdn-icons-png.flaticon.com/512/2814/2814877.png" alt="Eventos">
+                <h2>Eventos</h2>
+                <p>Conectamos comunidades con actividades culturales.</p>
+            </div>
+            <div class="card" style="background-color:#AB47BC;">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Empleos">
+                <h2>Servicios</h2>
+                <p>Sercos perimetricos, paneles solares systema de alarmas.</p>
+            </div>
+        </section>
+
+        <section class="carrusel-section">
+            <h3>Nuestros Proyectos en Imágenes ✨</h3>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="project-slide" data-info="Detalle de la foto 1: Iniciando con Python en el backend." data-title="Python Básico">
+                        <img src="foto1.png" alt="Proyecto 1">
+                    </div>
+                    <div class="project-slide" data-info="Detalle de la foto 2: Desarrollo web con JavaScript." data-title="JavaScript Frontend">
+                        <img src="foto2.png" alt="Proyecto 2">
+                    </div>
+                    <div class="project-slide" data-info="Detalle de la foto 3: Proyecto de Arduino y robótica." data-title="Arduino Proyectos">
+                        <img src="foto3.png" alt="Proyecto 3">
+                    </div>
+                    <div class="project-slide" data-info="Detalle de la foto 4: Ejemplo de uso de C++." data-title="C++ Rendimiento">
+                        <img src="foto4.png" alt="Proyecto 4">
+                    </div>
+                    <div class="project-slide" data-info="Detalle de la foto 5: Programación orientada a objetos." data-title="POO Avanzado">
+                        <img src="foto5.png" alt="Proyecto 5">
+                    </div>
+                    <div class="project-slide" data-info="Detalle de la foto 6: Un vistazo a nuestros grupos de estudio." data-title="Comunidad LOJITEK">
+                        <img src="foto6.png" alt="Proyecto 6">
+                    </div>
+                </div>
+                <button class="carousel-btn prev-btn">❮</button>
+                <button class="carousel-btn next-btn">❯</button>
+            </div>
+        </section>
+
+        <section class="interactive-area single-column">
+            <div class="support-links feature-box">
+                <h3>Apoya Nuestros Tutoriales 🚀</h3>
+                <p>Tu donación nos ayuda a seguir creando contenido de alta calidad.</p>
+                
+                <a href="TU_LINK_PAYPAL" target="_blank" class="action-btn paypal-btn">Donar con PayPal 💳</a>
+                
+                <button id="crypto-button" class="action-btn crypto-btn">Donar con Crypto ₿</button>
+                <div id="crypto-addresses" class="hidden-info">
+                    <p>BTC: [Tu dirección BTC]</p>
+                    <p>ETH: [Tu dirección ETH]</p>
+                </div>
+                
+                <div class="social-links">
+                    <p>Síguenos: <a href="TU_LINK_YOUTUBE" target="_blank">YouTube ▶️</a> | 
+                    <a href="TU_LINK_TIKTOK" target="_blank">TikTok 🎵</a> | 
+                    <a href="TU_LINK_WHATSAPP" target="_blank">WhatsApp 💬</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <div id="infoModal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h4 id="modal-title">Título del Proyecto</h4>
             <p id="modal-info">Información detallada del proyecto se mostrará aquí.</p>
-            <a href="#" id="modal-link" target="_blank" class="btn-tutoriales">Ver Tutorial</a>
+            <a href="TU_LINK_DEL_TUTORIAL" id="modal-link" target="_blank" class="action-btn">Ver Tutorial Relacionado</a>
         </div>
     </div>
+
+    <section class="coffee-support">
+        </section>
+
+    <footer>
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
