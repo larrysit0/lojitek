@@ -20,26 +20,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalInfo = document.getElementById("modal-info");
     const modalLink = document.getElementById("modal-link");
 
-    if (track && slides.length > 0) {
-        const slidesToShow = 3; // Muestra 3 imágenes a la vez
-        let slideIndex = 0;
-        
-        // Se calcula el ancho del slide una vez que la página está cargada
-        const slideWidth = slides[0].offsetWidth; 
+    const slidesToShow = 3; // Muestra 3 imágenes a la vez
+    let slideIndex = 0;
 
-        const moveSlides = () => {
+    if (track && slides.length > 0) {
+        
+        // Función clave para calcular el ancho y mover los slides
+        const updateCarousel = () => {
+            if (slides.length === 0) return;
+            
+            // Calculamos el ancho visible de un solo slide
+            const slideWidth = slides[0].clientWidth; 
+            
+            // Aplicamos el ancho total del track (todos los slides juntos)
+            track.style.width = `${slides.length * slideWidth}px`;
+            
+            // Movemos el carrusel a la posición actual
             track.style.transform = 'translateX(-' + (slideIndex * slideWidth) + 'px)';
         };
         
+        // Llamar al inicio y cuando se redimensiona
+        updateCarousel();
+        window.addEventListener('resize', updateCarousel);
+
+
         // Función para los botones de navegación
         nextButton.addEventListener('click', () => {
-            slideIndex = (slideIndex < slides.length - slidesToShow) ? slideIndex + 1 : 0;
-            moveSlides();
+            if (slideIndex < slides.length - slidesToShow) {
+                slideIndex++;
+            } else {
+                slideIndex = 0; // Bucle
+            }
+            updateCarousel();
         });
 
         prevButton.addEventListener('click', () => {
-            slideIndex = (slideIndex > 0) ? slideIndex - 1 : slides.length - slidesToShow;
-            moveSlides();
+            if (slideIndex > 0) {
+                slideIndex--;
+            } else {
+                slideIndex = slides.length - slidesToShow; // Bucle
+            }
+            updateCarousel();
         });
 
         // Evento de click para abrir el Modal
@@ -48,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalTitle.textContent = slide.getAttribute('data-title');
                 modalInfo.textContent = slide.getAttribute('data-info');
                 
-                // Aquí deberías colocar el enlace real al tutorial o información
+                // Simulación de enlace para el tutorial
                 modalLink.href = "ENLACE_A_TU_VIDEO_O_PAGINA_DE_" + slide.getAttribute('data-title').replace(/\s/g, '_'); 
 
                 modal.style.display = "block";
@@ -56,13 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Cerrar Modal con la 'X'
+    // Cerrar Modal con la 'X' y al hacer click fuera
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
             modal.style.display = "none";
         });
     }
-    // Cerrar Modal al hacer click fuera
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
             modal.style.display = "none";
