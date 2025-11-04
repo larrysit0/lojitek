@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- LÓGICA DE TU FUNCIÓN ORIGINAL (CUPÓN DE CAFÉ) ---
+    // --- FUNCIÓN ORIGINAL: Invítame un Café (Yape) ---
     const coffeeCup = document.getElementById("coffee-cup");
     if (coffeeCup) {
         coffeeCup.addEventListener("click", function() {
@@ -21,16 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalLink = document.getElementById("modal-link");
 
     if (track && slides.length > 0) {
-        const slidesToShow = 3;
+        const slidesToShow = 3; // Muestra 3 imágenes a la vez
         let slideIndex = 0;
         
-        // El offsetWidth se calcula al cargar, asegurando la precisión del movimiento
+        // Se calcula el ancho del slide una vez que la página está cargada
         const slideWidth = slides[0].offsetWidth; 
 
         const moveSlides = () => {
             track.style.transform = 'translateX(-' + (slideIndex * slideWidth) + 'px)';
         };
-
+        
+        // Función para los botones de navegación
         nextButton.addEventListener('click', () => {
             slideIndex = (slideIndex < slides.length - slidesToShow) ? slideIndex + 1 : 0;
             moveSlides();
@@ -47,20 +48,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalTitle.textContent = slide.getAttribute('data-title');
                 modalInfo.textContent = slide.getAttribute('data-info');
                 
-                // Simulación de enlace para el tutorial
-                modalLink.href = "#tutorial-" + slide.getAttribute('data-title').toLowerCase().replace(/\s/g, '-');
+                // Aquí deberías colocar el enlace real al tutorial o información
+                modalLink.href = "ENLACE_A_TU_VIDEO_O_PAGINA_DE_" + slide.getAttribute('data-title').replace(/\s/g, '_'); 
 
                 modal.style.display = "block";
             });
         });
     }
 
-    // Cerrar Modal con la 'X' y al hacer click fuera
+    // Cerrar Modal con la 'X'
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
             modal.style.display = "none";
         });
     }
+    // Cerrar Modal al hacer click fuera
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
             modal.style.display = "none";
