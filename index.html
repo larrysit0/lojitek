@@ -1,65 +1,55 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <header>
-        <header class="top-header">
-  <h1>LOJITEK.VIP</h1>
-  <p>Donde la tecnología, la comunidad y la naturaleza se encuentran</p>
+<header class="top-header">
+    <h1>LOJITEK.VIP</h1>
+    <p>Tu Portal a la Tecnología, Programación y Robótica</p>
 </header>
 
-    </header>
-
-    <main>
-        <section class="cards-container">
-            <!-- Ejemplo de una tarjeta -->
-            <div class="card" style="background-color:#FFA726;">
-                <img src="https://cdn-icons-png.flaticon.com/512/4086/4086679.png" alt="Turismo">
-                <h2>Turismo</h2>
-                <p>Descubre los paisajes y aventuras de Topará.</p>
-            </div>
-            <div class="card" style="background-color:#66BB6A;">
-                <img src="https://i.postimg.cc/X7fJk4y4/robot.png" alt="Robotica">
-                <h2>Robótica</h2>
-                <p>Innovación en automatización y futuro tecnológico.</p>
-            </div>
-            <div class="card" style="background-color:#42A5F5;">
-                <img src="https://cdn-icons-png.flaticon.com/512/2814/2814877.png" alt="Eventos">
-                <h2>Eventos</h2>
-                <p>Conectamos comunidades con actividades culturales.</p>
-            </div>
-            <div class="card" style="background-color:#AB47BC;">
-                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Empleos">
-                <h2>Servicios</h2>
-                <p>Sercos perimetricos, paneles solares systema de alarmas.</p>
-            </div>
-        </section>
-    </main>
-
-    <section class="coffee-support">
-        <div id="coffee-cup">
-            <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Invítame un café">
-            <p>Invítame un café</p>
+<main>
+    <section class="cards-container">
+        <div class="card" style="background-color:#42A5F5;"> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968313.png" alt="Python Icono">
+            <h2>Python 🐍</h2>
+            <p>De novato a experto. Aprende Machine Learning y Web.</p>
+            <a href="#" class="btn-tutoriales">Ver Tutoriales</a>
         </div>
-        <div id="coffee-popup" class="hidden">
-            <p><strong>Yapéame</strong> al número:</p>
-            <p class="number">960 661 434</p>
-            <p class="note">☕ para un café o ❤️ deja un donativo</p>
+        <div class="card" style="background-color:#FFCA28;"> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript Icono">
+            <h2>JavaScript 📜</h2>
+            <p>Dominio web interactivo y desarrollo de APIs.</p>
+            <a href="#" class="btn-tutoriales">Ver Tutoriales</a>
+        </div>
+        <div class="card" style="background-color:#66BB6A;"> <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++ Icono">
+            <h2>C / C++ ⚙️</h2>
+            <p>Programación de bajo nivel, rendimiento y sistemas.</p>
+            <a href="#" class="btn-tutoriales">Ver Tutoriales</a>
+        </div>
+        <div class="card" style="background-color:#AB47BC;"> <img src="https://cdn-icons-png.flaticon.com/512/3673/3673752.png" alt="Arduino Icono">
+            <h2>Robótica & Arduino 🤖</h2>
+            <p>Proyectos prácticos de automatización y hardware.</p>
+            <a href="#" class="btn-tutoriales">Ver Tutoriales</a>
+        </div>
+    </section>
+    
+    <section class="interactive-area">
+        <div id="ruleta-container" class="feature-box">
+            <h3>¡Elige tu Desafío! 🎲</h3>
+            <p>Gira para obtener un tema de programación o robótica.</p>
+            <button id="spin-button" class="action-btn">GIRAR RUEDA</button>
+        </div>
+
+        <div class="support-links feature-box">
+            <h3>Apoya el Contenido 🚀</h3>
+            <p>Tu donación nos ayuda a seguir creando tutoriales.</p>
+            <a href="TU_LINK_PAYPAL" target="_blank" class="action-btn paypal-btn">Donar con PayPal 💳</a>
+            <button id="crypto-button" class="action-btn crypto-btn">Donar con Crypto ₿</button>
+            <div id="crypto-addresses" class="hidden-info">
+                <p>BTC: [Tu dirección BTC]</p>
+                <p>ETH: [Tu dirección ETH]</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="TU_LINK_YOUTUBE" target="_blank">YouTube ▶️</a> | 
+                <a href="TU_LINK_TIKTOK" target="_blank">TikTok 🎵</a> | 
+                <a href="TU_LINK_WHATSAPP" target="_blank">Grupo WhatsApp 💬</a>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <footer class="footer">
-  <p>&copy; 2025 Lojitek.vip - Unidos por un futuro brillante <br> contactanos: Peru/Lima 960661434 / 980516446</p>       
-</footer>
-
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    </main>
