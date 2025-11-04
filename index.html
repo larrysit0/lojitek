@@ -1,64 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOJITEK.VIP</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <header>
-        <header class="top-header">
-  <h1>LOJITEK.VIP</h1>
-  <p>Donde la tecnología, la comunidad y la naturaleza se encuentran</p>
-</header>
+    
+    <header>
+        <header class="top-header">
+            <h1>LOJITEK.VIP</h1>
+            <p>Donde la tecnología, la comunidad y la naturaleza se encuentran</p>
+        </header>
+    </header>
 
-    </header>
+    <main>
+        
+        <section class="carrusel-section">
+            <h3>Explora en Imágenes 💡</h3>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="project-slide" data-info="Detalle de la foto 1: Proyecto de Python y análisis de datos." data-title="Python Data">
+                        <img src="foto1.png" alt="Proyecto 1">
+                    </div>
+                    <div class="project-slide" data-info="Detalle de la foto 2: Desarrollo de juegos en JavaScript." data-title="JS Juegos">
+                        <img src="foto2.png" alt="Proyecto 2">
+                    </div>
+                    <div class="project-slide" data-info="Detalle de la foto 3: Uso de Arduino en un sistema de alarma." data-title="Robótica Alarma">
+                        <img src="foto3.png" alt="Proyecto 3">
+                    </div>
+                    <div class="project-slide" data-info="Detalle de la foto 4: Tutorial de C/C++ para rendimiento." data-title="C++ Base">
+                        <img src="foto4.png" alt="Proyecto 4">
+                    </div>
+                    <div class="project-slide" data-info="Detalle de la foto 5: Últimas noticias de tecnología." data-title="Noticias Tech">
+                        <img src="foto5.png" alt="Proyecto 5">
+                    </div>
+                    <div class="project-slide" data-info="Detalle de la foto 6: Un vistazo a nuestros grupos de clases." data-title="Clases WhatsApp">
+                        <img src="foto6.png" alt="Proyecto 6">
+                    </div>
+                </div>
+                <button class="carousel-btn prev-btn">❮</button>
+                <button class="carousel-btn next-btn">❯</button>
+            </div>
+        </section>
+        <section class="cards-container">
+            <div class="card" style="background-color:#FFA726;">
+                <img src="https://cdn-icons-png.flaticon.com/512/4086/4086679.png" alt="Turismo">
+                <h2>Turismo</h2>
+                <p>Descubre los paisajes y aventuras de Topará.</p>
+            </div>
+            <div class="card" style="background-color:#66BB6A;">
+                <img src="https://i.postimg.cc/X7fJk4y4/robot.png" alt="Robotica">
+                <h2>Robótica</h2>
+                <p>Innovación en automatización y futuro tecnológico.</p>
+            </div>
+            <div class="card" style="background-color:#42A5F5;">
+                <img src="https://cdn-icons-png.flaticon.com/512/2814/2814877.png" alt="Eventos">
+                <h2>Eventos</h2>
+                <p>Conectamos comunidades con actividades culturales.</p>
+            </div>
+            <div class="card" style="background-color:#AB47BC;">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Empleos">
+                <h2>Servicios</h2>
+                <p>Sercos perimetricos, paneles solares systema de alarmas.</p>
+            </div>
+        </section>
+    </main>
 
-    <main>
-        <section class="cards-container">
-                        <div class="card" style="background-color:#FFA726;">
-                <img src="https://cdn-icons-png.flaticon.com/512/4086/4086679.png" alt="Turismo">
-                <h2>Turismo</h2>
-                <p>Descubre los paisajes y aventuras de Topará.</p>
-            </div>
-            <div class="card" style="background-color:#66BB6A;">
-                <img src="https://i.postimg.cc/X7fJk4y4/robot.png" alt="Robotica">
-                <h2>Robótica</h2>
-                <p>Innovación en automatización y futuro tecnológico.</p>
-            </div>
-            <div class="card" style="background-color:#42A5F5;">
-                <img src="https://cdn-icons-png.flaticon.com/512/2814/2814877.png" alt="Eventos">
-                <h2>Eventos</h2>
-                <p>Conectamos comunidades con actividades culturales.</p>
-            </div>
-            <div class="card" style="background-color:#AB47BC;">
-                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Empleos">
-                <h2>Servicios</h2>
-                <p>Sercos perimetricos, paneles solares systema de alarmas.</p>
-            </div>
-        </section>
-    </main>
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h4 id="modal-title">Título del Proyecto</h4>
+            <p id="modal-info">Información detallada del proyecto se mostrará aquí.</p>
+            <a href="#" id="modal-link" target="_blank" class="modal-link-btn">Ver Más / Ir al Tutorial</a>
+        </div>
+    </div>
 
-    <section class="coffee-support">
-        <div id="coffee-cup">
-            <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Invítame un café">
-            <p>Invítame un café</p>
-        </div>
-        <div id="coffee-popup" class="hidden">
-            <p><strong>Yapéame</strong> al número:</p>
-            <p class="number">960 661 434</p>
-            <p class="note">☕ para un café o ❤️ deja un donativo</p>
-        </div>
-    </section>
+    <section class="coffee-support">
+        <div id="coffee-cup">
+            <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Invítame un café">
+            <p>Invítame un café</p>
+        </div>
+        <div id="coffee-popup" class="hidden">
+            <p><strong>Yapéame</strong> al número:</p>
+            <p class="number">960 661 434</p>
+            <p class="note">☕ para un café o ❤️ deja un donativo</p>
+        </div>
+    </section>
 
-    <footer>
-        <footer class="footer">
-  <p>&copy; 2025 Lojitek.vip - Unidos por un futuro brillante <br> contactanos: Peru/Lima 960661434 / 980516446</p>       
-</footer>
+    <footer>
+        <footer class="footer">
+            <p>&copy; 2025 Lojitek.vip - Unidos por un futuro brillante <br> contactanos: Peru/Lima 960661434 / 980516446</p>     
+        </footer>
+    </footer>
 
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
