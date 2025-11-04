@@ -1,19 +1,26 @@
+/* --- CORRECCIÓN CRÍTICA: ELIMINA MÁRGENES Y GARANTIZA COBERTURA TOTAL --- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
 /* ======================================================= */
 /* === SECCIÓN 1: TU CÓDIGO CSS ORIGINAL (Base del Diseño) === */
 /* ======================================================= */
 
 body {
-    margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    /* CORRECCIÓN #1: Aplicamos el color naranja al body para cubrir el fondo completo */
+    /* Aplicamos el color naranja al body para cubrir el fondo completo */
     background: #F57809; 
     color: #333;
 }
     
-/* Contenedor principal para los 4 bloques */
 main {
-    /* CORRECCIÓN #2: Le damos al main el fondo blanco original */
+    /* Le damos al main el fondo blanco original para que el contenido se vea */
     background-color: #f8f8f8; 
+    padding-top: 0; /* No necesitamos padding aquí si el header ya tiene */
 }
 
 header {
@@ -52,14 +59,14 @@ header {
     margin-bottom: 1rem;
 }
 
-/* SECCIÓN DEL CAFÉ (Corregida para fondo naranja) */
+/* SECCIÓN DEL CAFÉ (Corregida para fondo naranja continuo) */
 .coffee-support {
     text-align: center;
-    margin: 2rem 0;
-    /* CORRECCIÓN #3: Fondo naranja para evitar el espacio blanco entre main y footer */
+    margin: 0; /* Eliminamos el margen superior para que se pegue al main */
+    /* Fondo naranja para evitar el espacio blanco entre main y footer */
     background-color: #F57809; 
     padding: 1rem 0; 
-    color: white; /* Texto blanco para leerse sobre el naranja */
+    color: white; 
 }
 
 #coffee-cup {
@@ -79,12 +86,11 @@ header {
 
 #coffee-popup {
     margin-top: 1rem;
-    /* Ajuste de color para contrastar con el fondo naranja */
     background-color: #ff9800; 
     display: inline-block;
     padding: 1rem 2rem;
     border-radius: 10px;
-    border: 1px solid white; /* Borde más visible */
+    border: 1px solid white; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -94,7 +100,7 @@ header {
 
 #coffee-popup .number {
     font-size: 1.4rem;
-    color: white; /* Número en blanco para que se lea bien */
+    color: white; 
     font-weight: bold;
 }
 
@@ -152,7 +158,7 @@ header {
 
 /* CLAVE DE CORRECCIÓN: Limite de tamaño para las imágenes del carrusel */
 .project-slide img {
-    max-width: 250px; 
+    max-width: 250px; /* Tamaño máximo para que no se vean gigantes */
     width: 100%; 
     height: auto;
     border-radius: 5px;
