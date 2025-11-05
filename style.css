@@ -1,92 +1,107 @@
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f8f8f8;
-    color: #333;
+/* --- CORRECCIÓN CRÍTICA: RESET Y COBERTURA TOTAL (Elimina franjas blancas en bordes) --- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
 }
-    
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    /* Aplicamos el color naranja al body para la cobertura total */
+    background: #F57809; 
+    color: #333;
+}
+
+/* El contenido principal debe tener el fondo blanco */
+main {
+    background-color: #f8f8f8; 
+}
+    
 header {
-    text-align: center;
-    padding: 2rem;
-    background: #F57809; /* Igual que el footer */
-    color: white;
+    text-align: center;
+    padding: 2rem;
+    background: #F57809;
+    color: white;
 }
 
 .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2rem;
-    gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
 }
 
 .card {
-    width: 250px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    text-align: center;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 
 .card img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1rem;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
 }
 
-.footer {
-  background-color: #ff6f00; /* igual que el header */
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
+/* SECCIÓN DEL CAFÉ (Corregido para continuidad naranja) */
 .coffee-support {
-    text-align: center;
-    margin: 2rem 0;
+    text-align: center;
+    margin: 0; 
+    padding: 1rem 0; 
+    color: white; 
 }
 
 #coffee-cup {
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
 }
 
 #coffee-cup img {
-    width: 60px;
-    transition: transform 0.3s ease;
+    width: 60px;
+    transition: transform 0.3s ease;
 }
 
 #coffee-cup:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #coffee-popup {
-    margin-top: 1rem;
-    background-color: #ffe0b2;
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    border: 1px solid #ff9800;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+    background-color: #ff9800; 
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: 1px solid white; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 #coffee-popup.hidden {
-    display: none;
+    display: none;
 }
 
 #coffee-popup .number {
-    font-size: 1.4rem;
-    color: #e65100;
-    font-weight: bold;
+    font-size: 1.4rem;
+    color: white; 
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #ff6f00; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
